@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "744c5507-8089-486a-af3f-e091839f46d3",
+		"name": "Challenge_6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34597661"
+	},
+	"item": [
+		{
+			"name": "Register Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNkM2Q1N2NjLWE0MjAtNDUwZC1hMDBkLTA0MGExNTgxMzQ1OCIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzE3MjE0ODQyLCJleHAiOjE3MTk4MDY4NDJ9.fNLnpBx-G3fT5Mz5uUrUZWeBCBHMEU3YCSvxh4Mu0qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Erling Haaland\",\r\n  \"email\": \"erlinghaaland@binar.com\",\r\n  \"password\": \"haaland123\",\r\n  \"role\": \"customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"erlinghaaland@binar.com\",\r\n  \"password\": \"haaland123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzOGIzMGVlLWQ3YTktNDhkOS04ZmRiLTZmNjFlMGMyZjQ0OSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcxNzIxMzIxNywiZXhwIjoxNzE5ODA1MjE3fQ.wPlwhmNvnAQaaHWL6AaWaWLjrsQqODpgXn9pHLGpPrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3AlLOvVYPz6VLoLf3wT1JbmQtGeuxnKesb.JYQgfuqH715UzlTtu2beyKasiwfOVMDgS03jrnSxvEo",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.32.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzOGIzMGVlLWQ3YTktNDhkOS04ZmRiLTZmNjFlMGMyZjQ0OSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcxNzIxMzIxNywiZXhwIjoxNzE5ODA1MjE3fQ.wPlwhmNvnAQaaHWL6AaWaWLjrsQqODpgXn9pHLGpPrs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"philfoden@binar.com\",\r\n  \"password\": \"foden123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Super Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"superadmin2@binar.com\",\r\n  \"password\": \"superadmin2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Admin ",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Admin17\",\r\n  \"email\": \"admin17@binar.com\",\r\n  \"password\": \"admin17\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3AlLOvVYPz6VLoLf3wT1JbmQtGeuxnKesb.JYQgfuqH715UzlTtu2beyKasiwfOVMDgS03jrnSxvEo",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.32.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI0MDUwN2NkLWFlYjgtNDMxZC1iNDM1LWJlMDE4YmQ1Yjk2NCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNzIyMTEyMCwiZXhwIjoxNzE3MjU3MTIwfQ.91Vwrm5x5jjPEpfu6eTGaq_lLJDC5DcEkoPn3C5Dmg4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/current-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"current-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Available Cars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0YjI3YWNhLTU0OWQtNGRkOS1hM2YyLTdiM2MzZWExMTVjOCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcxNzIxOTM2MCwiZXhwIjoxNzE3MjU1MzYwfQ.8DJSXOxYVoRbtWsPQDfuDuwVBYM7lBifNHM16lAu6wI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars/available",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Cars",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY0YjI3YWNhLTU0OWQtNGRkOS1hM2YyLTdiM2MzZWExMTVjOCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcxNzIxOTM2MCwiZXhwIjoxNzE3MjU1MzYwfQ.8DJSXOxYVoRbtWsPQDfuDuwVBYM7lBifNHM16lAu6wI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"superadmin3@binar.com\",\r\n  \"password\": \"superadmin3\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI0MDUwN2NkLWFlYjgtNDMxZC1iNDM1LWJlMDE4YmQ1Yjk2NCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNzIyMTEyMCwiZXhwIjoxNzE3MjU3MTIwfQ.91Vwrm5x5jjPEpfu6eTGaq_lLJDC5DcEkoPn3C5Dmg4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"plate\": \"AE 6213 OBV\",\r\n  \"manufacture\": \"Honda\",\r\n  \"model\": \"Mpbilio\",\r\n  \"image\": \"path/to/image123.jpg\",\r\n  \"rentPerDay\": 300000,\r\n  \"capacity\": 8,\r\n  \"description\": \"The new look of Honda Mobilio makes it a stylish partner, a family car that is always attractive in all your activities\",\r\n  \"transmission\": \"Manual\",\r\n  \"available\": true,\r\n  \"type\": \"MPV\",\r\n  \"year\": \"2020\",\r\n  \"options\": [\"Air Conditioning\", \"Air Suspension\" ],\r\n  \"specs\": [\"30L\", \"Pertalite\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cars",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYzgwZWI0LWQyZjktNDBlZi1iODkxLWVhZTg4MWNmYjc4YSIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzE3MjIzMzM3LCJleHAiOjE3MTcyNTkzMzd9.Ev7KavFEZDh8lRVWCAm_TsTabEeQBciMRzuyRSaWPY0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"plate\": \"N 5555 HN\",\r\n  \"manufacture\": \"Suzuki\",\r\n  \"model\": \"New Ignis\",\r\n  \"image\": \"path/to/image12.jpg\",\r\n  \"rentPerDay\": 250000,\r\n  \"capacity\": 6,\r\n  \"description\": \"Most Comtfortable cars\",\r\n  \"transmission\": \"Manual\",\r\n  \"available\": true,\r\n  \"type\": \"MPV\",\r\n  \"year\": \"2016\",\r\n  \"options\": [\"GPS\", \"Air Conditioning\", \"Air Suspension\"],\r\n  \"specs\": [\"30L\", \"Pertalite\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars/f8bb9972-fca5-446f-84ec-c3d0109e4d7b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"f8bb9972-fca5-446f-84ec-c3d0109e4d7b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQyMDAxMTNjLTlhZGQtNDc2OS1iZmVlLWRjMGU3NWQzODQwZCIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzE3MjI0MjA0LCJleHAiOjE3MTcyNjAyMDR9.1kdbdgXkbRildxATQHBJO1xqGcJHKyiRzksMKKXxTD0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars/9720c1e9-8eb5-4026-87cf-aa28e8761be0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"9720c1e9-8eb5-4026-87cf-aa28e8761be0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Permanent",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQyMDAxMTNjLTlhZGQtNDc2OS1iZmVlLWRjMGU3NWQzODQwZCIsInJvbGUiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzE3MjI0MjA0LCJleHAiOjE3MTcyNjAyMDR9.1kdbdgXkbRildxATQHBJO1xqGcJHKyiRzksMKKXxTD0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cars/permanent/6037f56c-6dc3-4b72-ad70-8e0baf7c3cd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"permanent",
+						"6037f56c-6dc3-4b72-ad70-8e0baf7c3cd5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
