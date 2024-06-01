@@ -1,4 +1,3 @@
-//src/database/migrations/[timestamp]create_cars_table
 import { Knex } from "knex";
 
 export async function up(knex: Knex): Promise<void> {

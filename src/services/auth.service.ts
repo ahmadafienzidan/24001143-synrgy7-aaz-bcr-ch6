@@ -1,5 +1,3 @@
-//src/services/auth.service.ts
-
 import { usersRepository } from "../repositories/users.repository";
 import { hashPassword, comparePassword, generateToken } from "../utils/auth.util";
 

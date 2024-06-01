@@ -1,5 +1,3 @@
-//src/models/cars.model.ts
-
 import { Model, ModelObject } from "objection";
 import { UsersModel } from "./users.model";
 

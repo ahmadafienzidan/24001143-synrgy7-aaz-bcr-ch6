@@ -1,5 +1,3 @@
-//src/models/user.model.ts
-
 import { Model, ModelObject } from "objection";
 
 export class UsersModel extends Model {

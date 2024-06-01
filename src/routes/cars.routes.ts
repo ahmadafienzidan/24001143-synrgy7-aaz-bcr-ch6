@@ -1,5 +1,3 @@
-// src/routes/cars.routes.ts
-
 import { Router } from "express";
 import { carsController } from "../controllers/cars.controller";
 import { authenticate, authorize } from "../middlewares/auth.middleware";

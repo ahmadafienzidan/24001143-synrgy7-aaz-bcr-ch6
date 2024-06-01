@@ -1,5 +1,3 @@
-// src/repositories/users.repository.ts
-
 import { UsersModel } from "../models/users.model";
 
 class UsersRepository {

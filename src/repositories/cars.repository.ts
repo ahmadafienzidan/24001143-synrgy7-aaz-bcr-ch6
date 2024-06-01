@@ -1,5 +1,3 @@
-// src/repositories/cars.repository.ts
-
 import { CarsModel } from "../models/cars.model";
 
 class CarsRepository {
